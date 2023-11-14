@@ -165,7 +165,6 @@ configure_file(
 helper_def = ''
 if bwrap.found()
   helper_def = '-DHELPER="@0@"'.format(bwrap.full_path())
-endif
 
 executable(
   'xdg-desktop-portal-validate-icon',
@@ -178,6 +177,7 @@ executable(
   install: true,
   install_dir: libexecdir,
 )
+endif
 
 configure_file(
   input: 'xdg-desktop-portal-rewrite-launchers.service.in',
